@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+<title>Strings</title>
+  <meta charset="utf-8">
+  <script src="strings.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    textarea {
+      width: 700px;
+      height: 400px;
+    }
+    label {
+      vertical-align: top;
+    }
+  </style>
+</head>
+<body>
+   <form>
+     <label for="searchTerm">Search for: </label>
+     <input type="text" id="searchTerm" size="35" 
+            placeholder="search term">
+     <input type="button" id="searchButton" value="Search"><br><br>
+     <label for="textToSearch">Search this text:</label>
+     <textarea id="textToSearch"></textarea>
+   </form> 
+   <div>
+     <h2>Results</h2>
+     <ul id="matchResultsList">
+     </ul>
+   </div>
+</body>
+</html>

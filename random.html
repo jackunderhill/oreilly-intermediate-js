@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+<title>My Random Thoughts</title>
+  <meta charset="utf-8">
+  <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+  <script src="random.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    form {
+      margin-bottom: 20px;
+    }
+    div#map {
+      width: 400px;
+      height: 400px;
+    }
+  </style>
+</head>
+<body>
+    <form>
+      <label>Enter a random thought:</label>
+      <input type="text" id="aThought">
+      <input type="button" id="submit" value="Submit">
+    </form>
+
+    <h2> What I'm thinking today </h2>
+    <ul id="thoughts">
+    </ul>
+    
+    <h2> Where I'm thinking today </h2>
+    <div id="map">
+    </div>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+<title>JavaScript Libraries and Feature Detection</title>
+  <meta charset="utf-8">
+  <script src="Modernizr.js"></script>
+  <script>
+        Modernizr.load([
+            "features.js",
+            {
+                test: Modernizr.boxshadow,
+                yep : "boxShadow.js",
+                nope: "noBoxShadow.js"
+            },
+            {
+                test: Modernizr.geolocation,
+                yep : "geolocation.js",
+                nope: "noGeolocation.js"
+            },
+            {
+                test: Modernizr.localstorage,
+                yep : "localStorage.js",
+                nope: "noLocalStorage.js",
+                complete: function() {
+                    init();
+                }
+            }
+        ]);
+  </script>
+  <style>
+	.box-shadow {
+	  margin: 30px 20px;
+	  padding: 20px 40px;
+	  -moz-box-shadow: #ABABAB 1px 1px 8px;
+	  -webkit-box-shadow: #ABABAB 1px 1px 8px;
+	  box-shadow: #ABABAB 1px 1px 8px;
+	}
+  </style>
+</head>
+<body>
+    <ul id="features">
+    </ul> 
+</body>
+</html>
